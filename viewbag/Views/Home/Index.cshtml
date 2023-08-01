@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h2>Index</h2>
+<h2>@ViewBag.Message</h2>
+<h2>@ViewBag.CurrentDate</h2>
+
+<ul>
+    @{
+        foreach (string i in ViewBag.FruitArray)
+        {
+            <li>@i</li>
+        }
+    }
+</ul>  
+<ul>
+    @{ 
+        foreach(string a in ViewBag.Sportslist)
+            {
+                <li>@a</li>
+            }
+    }
+</ul>
+@{ 
+    var b = ViewBag.Employee;
+
+}
+<p>@b.EmpId</p>
+<p>@b.EmpName</p>
+<p>@b.EmpDesignation</p>
+
+<h2>Data comes from viewdata=@ViewData["CommonMessage"]</h2>
+<h2>Data comes from ViewBa=@ViewBag.CommonMessage</h2>
